@@ -1,0 +1,34 @@
+<?php
+//Koneksi Server MYSQL
+$conn = mysql_connect("localhost","root","123456");
+if($conn) {
+		echo "";
+}
+else
+		{
+		die (":". mysql_connect_error());
+}
+//KONEKSI DATABASE MYSQL
+$database ="dbproyek";
+$seleksi_db = mysql_select_db($database);
+if (!$seleksi_db) {
+		die ("Database tidak terkoneksi");
+}
+		else
+			{
+		echo "<br><br>";
+}
+//Manupulasi Data dengan Perintah Mysql dan PHP
+$seleksi = "select nama, alamat, email, komentar from tbtamu order by nama";
+
+$hasilseleksi = mysql_query ($seleksi);
+if ($hasilseleksi) {
+		while ($row = mysql_fetch_row ($hasilseleksi)) {
+				echo " $row[0]<br />";
+}
+mysql_free_result($hasilseleksi);
+}
+mysql_close($conn);
+?>
+<body>
+<html>

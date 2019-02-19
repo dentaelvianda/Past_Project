@@ -1,0 +1,99 @@
+<html>
+<head>
+<title> Menampilkan data ke halaman browser</title>
+</head>
+<body>
+<h1> Menampilkan Data Ke dalam Halaman Browser</h1>
+<?php
+
+// deklarasi variabel koneksi
+
+
+$host   ="localhost";
+$username ="root";
+$password ="12345";
+
+//string koneksi
+$koneksi= mysql_connect($host,$username,$password);
+
+if ($koneksi) {
+	echo "Koneksi Sukses..!!";
+	}
+	else
+	{
+	die("Koneksi Gagal..!");
+	
+}
+
+// koneksi database
+$dbname="dbproyek";
+$koneksidatabase = mysql_select_db($dbname);
+if (!$koneksidatabase){
+	die ("Koneksi database gagal!!");
+	}
+	 else
+		{
+	echo "Data Terhubung..!!<br><br>";
+	} 
+
+// seleksi database untuk ditampilkan
+$seleksidb="select nama,alamat,komentar from tbtamu order by nama";
+$hasilseleksidb=mysql_query($seleksidb);
+
+if ($hasilseleksidb) {
+?>
+
+<h4>DAFTAR</h4>
+<table border="1">
+	<tr>
+		
+		<th width="110">NAMA</th>
+		<th width="200">ALAMAT</th>
+		<th width="80">KOMENTAR</th>
+	</tr>
+	
+<?php
+while ($row =mysql_fetch_row($hasilseleksidb)) {
+?>
+
+	<tr>
+	<?php
+	$nama = $row[0];
+	$alamat= $row[1];
+	$komentar= $row[2];
+	?>
+	
+	<td><?php echo $nama;?> </td>
+	<td><?php echo $alamat;?> </td>
+	<td><?php echo $komentar;?> </td>
+	</tr>
+	<?php
+}
+?>
+<?php
+	mysql_free_result($hasilseleksidb);
+}
+mysql_close($koneksi);
+?>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

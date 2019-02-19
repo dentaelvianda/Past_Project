@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <?php
+        // koneksi data
+        include ('fungsi/koneksi.php');
+        // ambil data
+        $ambil="select * from tb_berita order by id_berita ASC";
+        $kerja=mysql_query($ambil);
+        // tampil data
+        while($baris=mysql_fetch_array($kerja)) {
+            echo "<table cellpadding='5'><tr>
+                <td>".$baris['id.berita']."</td>
+                <td>".$baris['judul']."</td>
+                <td>".$baris['berita']."</td>
+            </tr></table>";
+        }
+        ?>
+        
+    </body>
+</html>

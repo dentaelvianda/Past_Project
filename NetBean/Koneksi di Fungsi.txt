@@ -1,0 +1,17 @@
+<?php
+/* Koneksi server*/
+$host="localhost";
+$user="root";
+$pass="12345";
+$koneksi=mysql_connect($host,$user,$pass);
+if (!$koneksi) {
+    echo "Koneksi server gagal";
+    }
+/* Koneksi database */
+$dbname="CMS";
+$koneksidb=mysql_select_db($dbname);
+if (!$koneksidb){
+    echo "Koneksi database gagal";
+}
+
+?>

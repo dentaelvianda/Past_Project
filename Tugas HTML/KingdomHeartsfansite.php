@@ -1,0 +1,51 @@
+<html>
+<head>
+ <Title>Kingdom Hearts Orders</title>	
+<style type="text/css">
+body {
+background: url("Gambar/background.jpg") no-repeat #2D5594;
+background-attachment: fixed;
+}
+</style>
+</head>
+<embed src="dearly.mp3",loop="true", autostart="true", hidden="true">
+<body bgcolor="white">
+<table border=1 bordercolor=blue align=center>
+<script language="JavaScript" type="text/javascript">
+var txt = "Welcome to Kingdom Hears Orders .::.";
+var speed = 250;
+var refresh = null;
+function move() {
+document.title=txt;
+txt=txt.substring(1,txt.length)+txt.charAt(0);
+refresh=setTimeout("move()",speed);}
+move();
+</script>
+
+<body>
+<tr>
+	<td width=200, height=100 align=center colspan=4><img align=center src="Gambar/cc.png" width=850 height=350></td>
+</tr>
+<tr>
+	<td width=200, height=100 colspan=2><a href="KingdomHeartsfansite.html"><img  align=center src="Gambar/f.jpg" width=450 height=100></a></td>
+	<td width=200, height=100 colspan=2><a href="KingdomHeartsfansite 2.html"><img align=center src="Gambar/g.jpg" width=450 height=100></a></td>
+</tr>
+<tr>
+	<td width=200, height=100 colspan=2 rowspan=2 align=center><font color="blue"><font size=4,5><font style="Arial Black"><b>Selamat Datang di Kingdom Hearts Orders!</font></font><br><p><font style="Calibri">Kami menawarkan anda item-item terbaik yang sangat digemari bagi anda pecinta Kingdom Hearts Series.<p> Jadi, pesanlah sekarang juga</font></font></td>
+	<td width=200, height=100 colspan=2><font color="blue"><form method="Post" action="login.php">
+<pre>
+Nama		<input type="text" name="Nama" /><br>
+Alamat		<input type="text" name="Alamat" /><br>
+Komentar	<input type="text" name="Komentar" /><br>
+			<input type="submit" name="Masuk" Value="Kirim" />
+</pre>
+</form></font><br><p><a href="tampil2.php">Lihat data tamu</a></td>
+</tr>
+<tr><td width=200, height=100><img src="K2.jpg" width=221 height=100></td>
+	<td width=200, height=100><img src="K1.jpg" width=221 height=100></td>
+</tr>
+<tr>
+	<td width=200, height=100 colspan=4 align=center><i><text align="center"><font color="blue"><font style="Monotype Corsiva"><font size="4"><b>"Thinking of you, wherever you are. We pray for our sorrows to end, and hope that our hearts will blend. Now I will step forward to realize this wish. And who knows: Starting a new journey may not be so hard, or maybe it has already begun. There are many worlds, but they share the same sky -- One sky, one destiny."<br>~Kairi</br></i></font></font></b></font></td>
+</tr>
+</body>
+</html>
